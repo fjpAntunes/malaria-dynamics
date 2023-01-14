@@ -2,7 +2,6 @@ from numpy import array, hstack, zeros, linspace, pi, ones
 from numpy.linalg import solve
 from scipy.integrate import odeint
 import numpy as np
-%matplotlib inline
 import matplotlib.pyplot as plt
 from matplotlib import cm
 
