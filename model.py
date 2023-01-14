@@ -433,9 +433,10 @@ class Malaria_System:
 
         font_size = 30
         tick_label_size = 25
-
-        axs[row, 0].plot(t, self.y[:,4], label='$L_p(t)$', dashes = [6,2])
-        axs[row, 0].plot(t, self.y[:,5], label = '$L_w(t)$')
+        color1 = '#3DAF96'
+        color2 = '#022B4B'
+        axs[row, 0].plot(t, self.y[:,4], label='$L_p(t)$', dashes = [6,2], color = color1 )
+        axs[row, 0].plot(t, self.y[:,5], label = '$L_w(t)$', color = color2)
         axs[row, 0].set_xlabel('', fontsize = font_size)
         axs[row, 0].set_ylabel('', fontsize = font_size)
         axs[row, 0].grid(True)
@@ -444,8 +445,8 @@ class Malaria_System:
         #axs[row, 0].legend(fontsize = font_size, loc='upper right')
 
 
-        axs[row, 1].plot(t, self.y[:,2], label = '$M_S(t)$')
-        axs[row, 1].plot(t, self.y[:,3], label = '$M_I(t)$', dashes = [6,2])
+        axs[row, 1].plot(t, self.y[:,2], label = '$M_S(t)$', color = color2)
+        axs[row, 1].plot(t, self.y[:,3], label = '$M_I(t)$', dashes = [6,2], color = color1)
         axs[row, 1].set_xlabel('', fontsize = font_size)
         axs[row, 1].set_ylabel('', fontsize = font_size)
         axs[row, 1].grid(True)
@@ -453,8 +454,8 @@ class Malaria_System:
         axs[row, 1].margins(x = 0)
         #axs[row, 1].legend(fontsize = font_size, loc='upper right')
 
-        axs[row, 2].plot(t, self.y[:,0], label = '$S(t)$')
-        axs[row, 2].plot(t, self.y[:,1], label = '$I(t)$', dashes = [6,2])
+        axs[row, 2].plot(t, self.y[:,0], label = '$S(t)$', color = color2)
+        axs[row, 2].plot(t, self.y[:,1], label = '$I(t)$', dashes = [6,2], color = color1)
         axs[row, 2].set_xlabel('', fontsize = font_size)
         axs[row, 2].set_ylabel('', fontsize = font_size)
         axs[row, 2].grid(True)
@@ -463,8 +464,8 @@ class Malaria_System:
         #axs[row, 2].legend(fontsize = font_size, loc='upper right')
 
         #axs[row, 3].plot(t,np.ones(len(t)),color = 'r')
-        axs[row, 3].plot(t, self.y[:,6], label='$V(t)$',dashes = [6,2])
-        axs[row, 3].plot(t, self.R_0_t(), label = '$R(t)$')
+        axs[row, 3].plot(t, self.y[:,6], label='$V(t)$',dashes = [6,2], color = color1)
+        axs[row, 3].plot(t, self.R_0_t(), label = '$R(t)$', color = color2)
         axs[row, 3].set_xlabel('', fontsize = font_size)
         axs[row, 3].set_ylabel('', fontsize = font_size)
         axs[row, 3].grid(True)
