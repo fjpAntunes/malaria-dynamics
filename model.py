@@ -465,7 +465,7 @@ class Malaria_System:
 
         #axs[row, 3].plot(t,np.ones(len(t)),color = 'r')
         axs[row, 3].plot(t, self.y[:,6], label='$V(t)$ (proportion of vegetation border cover)',dashes = [6,2], color = color1)
-        axs[row, 3].plot(t, self.R_0_t(), label = '$R(t)$ (dimensionless)t ', color = color2)
+        axs[row, 3].plot(t, self.R_0_t(), label = '$R(t)$ (dimensionless)', color = color2)
         axs[row, 3].set_xlabel('', fontsize = font_size)
         axs[row, 3].set_ylabel('', fontsize = font_size)
         axs[row, 3].grid(True)
